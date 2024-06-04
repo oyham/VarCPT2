@@ -34,3 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+function toggleContainer() {
+  var container = document.querySelector('.info-container');
+  container.classList.toggle('active');
+  
+  // Establecer la altura del contenedor igual a la altura del botón
+  var buttonHeight = document.querySelector('.subscribe-button').offsetHeight;
+  container.style.height = buttonHeight + 'px';
+}
+

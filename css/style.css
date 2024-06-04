@@ -179,7 +179,7 @@ main {
   }
 
   .desktop-navbar {
-    height: 70px;
+    height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -842,17 +842,24 @@ form {
 
 /* ABOUT */
 
-.about__container {
-  text-align: start;
+.about__container > * {
+  text-align: start!important;
 }
 
 .about__container h3 {
   border-bottom: 5px solid rgb(218, 218, 218);
+  text-align: start;
 }
 
 .about__container article:nth-child(2) {
   padding: 1rem;
   border-radius: 10px;
+}
+
+.about__ul > ul >*{
+  text-align: start;
+  padding: .2rem 0;
+  color: #6f7276;
 }
 
 .about__follow {

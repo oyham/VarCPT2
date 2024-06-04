@@ -443,6 +443,12 @@ h3 {
   border-bottom: 1px solid black;
 }
 
+.main__section div{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 ul,
 ol {
   padding: 0.5rem;

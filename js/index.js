@@ -43,3 +43,15 @@ function toggleContainer() {
   container.style.height = buttonHeight + 'px';
 }
 
+
+// Event listener para cerrar el menú al hacer clic en cualquier lugar de la página
+document.addEventListener('click', function(event) {
+  var container = document.querySelector('.info-container');
+  var button = document.querySelector('.subscribe-button');
+  
+  // Si el clic no es dentro del contenedor ni del botón, cierra el menú
+  if (!container.contains(event.target) && !button.contains(event.target)) {
+    container.classList.remove('active');
+  }
+});
+

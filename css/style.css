@@ -23,7 +23,7 @@ a {
 
 
 main {
-  padding-top: 70px;
+  padding-top: 37px;
 }
 
 .desktop-header,
@@ -203,11 +203,11 @@ main {
   .subscribe-button {
     position: fixed;
     left: 0;
-    top: 58%;
+    top: 50%;
     transform: translateY(-50%) rotate(-90deg);
     transform-origin: left center;
     padding: 1.5rem;
-    margin: 2rem 0 0 1.5rem;
+    margin: 6rem 0 0 1.5rem;
     background-color: #000000;
     color: white;
     border: none;
@@ -221,17 +221,18 @@ main {
     position: fixed;
     left: 0;
     top: 50%;
+    width: 15rem;
     transform: translateY(-50%);
     background-color: #ffffff;
     padding: 20px;
     display: none; /* Oculto por defecto */
     z-index: 999;
     margin-left: 3rem;
+    border: 1px solid black;
   }
   
   .info-container.active {
     display: block; /* Mostrar cuando tenga la clase 'active' */
-    height: 169px;
   }
 
   main {
@@ -372,7 +373,7 @@ body {
 .i__container {
   display: flex;
   place-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-right: 1rem;
 }
 

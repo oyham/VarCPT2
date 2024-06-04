@@ -77,7 +77,7 @@ main {
 
 .nav-menu {
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 
 .nav-branding {
@@ -136,11 +136,13 @@ main {
     /* Ocupa toda la pantalla menos la altura de la barra */
     text-align: center;
     background: black;
-    transition: 0.3s;
+    transition: all 0.4s ease-in-out;
     overflow-y: auto;
     /* Permite el desplazamiento vertical */
     z-index: 9998;
     /* Asegura que el menú esté justo debajo de la barra de navegación */
+    opacity: 0;
+    padding: 0;
   }
 
   .nav-item {
@@ -149,6 +151,7 @@ main {
 
   .nav-menu.active {
     right: 0;
+    opacity: 1;
   }
 }
 
@@ -348,6 +351,7 @@ ol {
 .nav-item {
   font-size: 0.9rem;
   color: whitesmoke;
+  padding-left: 1rem;
 }
 
 .nav__link {
@@ -364,6 +368,12 @@ ol {
 
 .nav__link:hover {
   color: white;
+}
+
+.login{
+  width: 100%;
+  background-color: #6f7276;
+  text-align: start;
 }
 
 /* DISCOVER */

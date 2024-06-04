@@ -37,7 +37,7 @@ main {
 }
 
 .mobile-header {
-  min-height: 66px;
+  min-height: 70px;
   width: 100%;
   /* Asegura una altura mínima */
   position: fixed;
@@ -78,6 +78,7 @@ main {
 .nav-menu {
   display: flex;
   align-items: start;
+
 }
 
 .nav-branding {
@@ -86,7 +87,9 @@ main {
 
 .nav-link {
   transition: 0.5s ease;
-
+  display: flex;
+  width: 100%;
+  gap: .5rem;
 }
 
 .hamburger {
@@ -143,15 +146,38 @@ main {
     /* Asegura que el menú esté justo debajo de la barra de navegación */
     opacity: 0;
     padding: 0;
+    color: #f3c50e;
+  }
+
+  .nav-menu>.nav-item>a {
+    color: #f3c50e;
+  }
+
+  .nav-menu>.nav-item:nth-child(1)>a,
+  .nav-menu>.nav-item:nth-child(4)>a {
+    color: #6f7276;
   }
 
   .nav-item {
     padding: 1.5rem 0;
+    font-size: 1.5rem;
+    width: 100%;
+    border-bottom: 1px solid rgb(63, 63, 63);
+    display: flex;
   }
 
   .nav-menu.active {
     right: 0;
     opacity: 1;
+  }
+
+  .country {
+    border-bottom: none;
+  }
+
+  .country a {
+    font-weight: bold;
+    color: #fff;
   }
 }
 
@@ -227,7 +253,7 @@ main {
     padding: .5rem;
   }
 
-  .nav-item:hover{
+  .nav-item:hover {
     background-color: #555;
   }
 
@@ -274,6 +300,11 @@ a {
 a,
 button {
   cursor: pointer;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 h1,
@@ -349,7 +380,7 @@ ol {
 }
 
 .nav-item {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: whitesmoke;
   padding-left: 1rem;
 }
@@ -370,9 +401,9 @@ ol {
   color: white;
 }
 
-.login{
+.login {
   width: 100%;
-  background-color: #6f7276;
+  background-color: #5a5a5a;
   text-align: start;
 }
 
@@ -847,13 +878,13 @@ form {
 .newsletter__labels {
   display: flex;
   gap: 2rem;
-  margin-top: .5rem ;
+  margin-top: .5rem;
 }
 
 /* ABOUT */
 
-.about__container > * {
-  text-align: start!important;
+.about__container>* {
+  text-align: start !important;
 }
 
 .about__container h3 {
@@ -866,7 +897,7 @@ form {
   border-radius: 10px;
 }
 
-.about__ul > ul >*{
+.about__ul>ul>* {
   text-align: start;
   padding: .2rem 0;
   color: #6f7276;

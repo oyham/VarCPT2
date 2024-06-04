@@ -75,6 +75,14 @@ main {
   width: 40%;
 }
 
+.i__container-mobile{
+  margin-left: 2rem;
+}
+
+.i__container-mobile button {
+  font-size: 1.5rem;
+}
+
 .nav-menu {
   display: flex;
   align-items: start;
@@ -995,5 +1003,38 @@ form {
   /* FOOTER IMG */
   .footer__container picture>img {
     width: 18%;
+  }
+}
+
+.i__data {
+  opacity: 0;
+  /* Invisible por defecto */
+  visibility: hidden;
+  /* Oculto por defecto */
+  background-color: rgba(207, 207, 207, 0.8);
+  padding: .5rem;
+  gap: .5rem;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  border-radius: 10px;
+  margin: .4rem;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  /* Transición suave */
+}
+
+@media (max-width: 768px) {
+  .i__data.show {
+    opacity: 1;
+    /* Visible cuando tenga la clase 'show' */
+    visibility: visible;
+    /* Visible cuando tenga la clase 'show' */
+  }
+}
+
+@media (min-width: 769px) {
+  .i__data {
+    display: none;
+    /* Oculto en escritorio */
   }
 }

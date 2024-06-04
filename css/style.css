@@ -21,13 +21,34 @@ a {
   text-decoration: none;
 }
 
-.desktop-header {
+main {
+  padding-top: 70px;
+}
+
+.desktop-header, .desktop-navbar {
   display: none;
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+.mobile-header {
+  min-height: 66px;
+  width: 100%;
+  /* Asegura una altura mínima */
+  position: fixed;
+  /* Fija la barra de navegación */
+  top: 0;
+  /* Coloca la barra en la parte superior */
+  left: 0;
+  /* Alinea la barra al lado izquierdo */
+  z-index: 9999;
+  /* Asegura que esté por encima de todo el contenido */
+  background-color: #ffffff;
+  /* Fondo blanco para la barra (puedes cambiarlo) */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar Mobile */
@@ -38,10 +59,12 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 .5rem;
+
+
 }
 
-.logo__img-mobile{
-    width: 50%;
+.logo__img-mobile {
+  width: 40%;
 }
 
 .nav-menu {
@@ -76,10 +99,6 @@ a {
   border-radius: 5px;
 }
 
-.nav-item {
-  padding: 0 1.5rem;
-}
-
 @media (max-width: 760px) {
   .bar {
     display: block;
@@ -88,12 +107,15 @@ a {
   .hamburger {
     display: block;
   }
+
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
+
   .hamburger.active .bar:nth-child(1) {
     transform: rotate(45deg) translateY(11.5px);
   }
+
   .hamburger.active .bar:nth-child(3) {
     transform: rotate(-45deg) translateY(-11.5px);
   }
@@ -117,33 +139,72 @@ a {
     right: 0;
   }
 
-  
+
 }
 
 /* Estilos para desktop */
 @media (min-width: 761px) {
+  main {
+    padding-top: 0;
+  }
+
   .desktop-header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-right: 2rem;
-  }
-
-  .dn{
-    display: none;
-}
-
-  .desktop-header img {
-    width: 20%;
-  }
-
-  .navbar {
-    position: relative;
+    min-height: 66px;
+    width: 100%;
+    position: fixed;
     top: 0;
-    padding-left: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #ffffff;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
   }
 
-  .logo__mobile{
+  .desktop-navbar{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    background-color: black;
+  }
+
+  .desktop-nav-menu{
+    display: flex;
+    gap: 1rem;
+  }
+
+
+  
+  .i__container-mobile {
     display: none;
+  }
+  
+  .dn {
+    display: none;
+  }
+  
+  .desktop-header img {
+    width: 25%;
+  }
+  
+  .mobile-header, .navbar {
+    display: none;
+  }
+
+  .logo__mobile {
+    display: none;
+  }
+
+  .main__img-container{
+    padding-top: 8rem;
+  
   }
 }
 
@@ -166,12 +227,13 @@ body {
   display: flex;
   place-items: center;
   gap: 2rem;
+  margin-right: 1rem;
 }
 
 
 
 img {
-  width: 70%;
+  width: 60%;
   height: auto;
 }
 
@@ -313,9 +375,13 @@ ol {
   height: 100%;
 }
 
-@media screen and (min-width: 1118px) {
+@media screen and (min-width: 1024px) {
   .card {
     min-height: 80vh;
+  }
+
+  .main__img-container{
+    padding-top: 12rem;
   }
 }
 
@@ -518,11 +584,11 @@ ol {
   /* CARDS */
   .cards__container {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(300px, 1fr)
-    ); /* Establece columnas automáticas con un ancho mínimo de 300px */
-    gap: 20px; /* Espacio entre las tarjetas */
+    grid-template-columns: repeat(auto-fit,
+        minmax(300px, 1fr));
+    /* Establece columnas automáticas con un ancho mínimo de 300px */
+    gap: 20px;
+    /* Espacio entre las tarjetas */
     margin: 0 6rem;
   }
 
@@ -538,7 +604,8 @@ ol {
 
   .proposal__info,
   .proposal__more-info {
-    flex: 1; /* Ensures equal width for both children */
+    flex: 1;
+    /* Ensures equal width for both children */
   }
 
   .proposal__info {
@@ -680,21 +747,21 @@ form {
   width: 100%;
 }
 
-.newsletter form > input {
+.newsletter form>input {
   height: 3rem;
 }
 
-.newsletter form > input[type="text"] {
+.newsletter form>input[type="text"] {
   width: 70%;
   border: none;
   padding: 0;
 }
 
-.newsletter form > input[type="text"]::placeholder {
+.newsletter form>input[type="text"]::placeholder {
   padding: 1rem;
 }
 
-.newsletter form > input[type="submit"] {
+.newsletter form>input[type="submit"] {
   border: none;
   width: 6rem;
   background-color: #f3c50e;
@@ -716,8 +783,7 @@ form {
   font-size: 0.8rem;
 }
 
-.newsletter span {
-}
+.newsletter span {}
 
 .newsletter__labels {
   display: flex;
@@ -773,7 +839,7 @@ form {
     justify-content: center;
   }
 
-  .newsletter form > input[type="submit"] {
+  .newsletter form>input[type="submit"] {
     width: 8rem;
   }
 
@@ -823,7 +889,7 @@ form {
   }
 
   /* FOOTER IMG */
-  .footer__container picture > img {
+  .footer__container picture>img {
     width: 18%;
   }
 }

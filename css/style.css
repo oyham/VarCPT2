@@ -656,15 +656,15 @@ ol {
 #toggleButton {
   margin-bottom: 2rem;
 }
-
-.more__info{
+.more__info {
   display: none;
   transition: all 0.5s ease-out;
   overflow: hidden;
 }
 
-.show {
-  display: block;
+.more__info.show {
+  text-align: start;
+  display: flex;
 }
 
 /* CONTACT */

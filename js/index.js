@@ -57,9 +57,5 @@ document.addEventListener('click', function(event) {
 
 document.getElementById('toggleButton').addEventListener('click', function() {
   var infoDiv = document.getElementById('info');
-  if (infoDiv.style.display === 'none' || infoDiv.style.display === '') {
-    infoDiv.style.display = 'block';
-  } else {
-    infoDiv.style.display = 'none';
-  }
+  infoDiv.classList.toggle('show');
 });

@@ -122,6 +122,7 @@ main {
 
   .hamburger {
     display: block;
+    margin-right: 1rem;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -650,6 +651,20 @@ ol {
 
 .proposal__img-container img {
   min-width: 100%;
+}
+
+#toggleButton {
+  margin-bottom: 2rem;
+}
+
+.more__info{
+  display: none;
+  transition: all 0.5s ease-out;
+  overflow: hidden;
+}
+
+.show {
+  display: block;
 }
 
 /* CONTACT */

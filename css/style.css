@@ -618,10 +618,14 @@ ol {
   position: relative;
   width: 100%;
   height: 330px;
-  background-image: url("../assets/moreInfoIMG.jpg");
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
+  overflow: hidden;
+}
+
+.proposal__more-info img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .proposal__more-info button {
@@ -629,7 +633,7 @@ ol {
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999 !important;
+  z-index: 999;
   background-color: #f3c50e;
   border: none;
   padding: 0.6rem 1.2rem;

@@ -338,6 +338,7 @@ main {
     background-color: #555;
   }
 
+  
   .nav-item:hover .dropdown-menu {
     display: block;
   }
@@ -664,7 +665,7 @@ ol {
 
 .more__info.show {
   text-align: start;
-  display: flex;
+  display: block;
 }
 
 /* CONTACT */
@@ -783,6 +784,11 @@ ol {
   .link__acc a:hover {
     color: #000;
   }
+
+  .nav-item {
+    padding: .5rem;
+  }
+
 
   /* CARDS */
   .cards__container {
